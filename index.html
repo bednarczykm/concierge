@@ -477,6 +477,32 @@
     flex-wrap: wrap;
   }
 
+  /* ================== LANG SWITCHER ================== */
+  .lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 4px 6px;
+    background: var(--surface-2);
+    border: 1px solid var(--border-hi);
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-right: 6px;
+  }
+  .lang-switcher a {
+    color: var(--muted);
+    padding: 2px 8px;
+    border-radius: 100px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .lang-switcher a:hover { color: var(--text); }
+  .lang-switcher a.active {
+    color: var(--violet-hi);
+    background: var(--surface-3);
+  }
+
   /* ================== RESPONSIVE ================== */
   @media (max-width: 960px) {
     .hero-inner, .demo-row, .demo-row.reverse,
@@ -504,6 +530,11 @@
       <a href="#demos">Demo</a>
       <a href="#korzysci">Korzyści</a>
       <a href="#porownanie">Porównanie</a>
+      <span class="lang-switcher">
+        <a href="/concierge/" class="active">PL</a>
+        <a href="/concierge/en/">EN</a>
+        <a href="/concierge/hr/">HR</a>
+      </span>
       <a href="#kontakt" class="btn btn-primary">Umów demo</a>
     </div>
   </div>
